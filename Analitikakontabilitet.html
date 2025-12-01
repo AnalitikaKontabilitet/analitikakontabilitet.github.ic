@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analitika Kontabilitet Sh.p.k</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; padding: 0; 
+            background: #f7f7f7; 
+            color: #333; /* gri e errët */
+        }
+        header { 
+            background: white; 
+            padding: 10px 20px; 
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+        header img {
+            height: 120px;
+            margin-right: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #444; /* gri */
+        }
+        header p {
+            margin: 0;
+            color: #666; 
+        }
+
+        nav { 
+            background: #e0e0e0; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        nav a { 
+            color: #333; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            padding: 20px; 
+            background: white; 
+        }
+        .lang-switcher { 
+            text-align: right; 
+            margin: 10px; 
+        }
+        .service { 
+            padding: 15px; 
+            background: #f0f0f0; 
+            margin-bottom: 10px; 
+            border-radius: 6px; 
+        }
+        footer { 
+            background: #222; 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 20px; 
+        }
+        button { 
+            margin-left: 5px; 
+            padding: 5px 10px; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo Analitika">
+    <div>
+        <h1 id="title">Analitika Kontabilitet Sh.p.k</h1>
+        <p id="subtitle">Zyra Profesionale e Kontabilitetit</p>
+    </div>
+</header>
+
+<div class="lang-switcher">
+    <button onclick="setLang('sq')">Shqip</button>
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('de')">Deutsch</button>
+</div>
+
+<nav>
+    <a href="#about" id="nav-about">Rreth Nesh</a>
+    <a href="#services" id="nav-services">Shërbimet</a>
+    <a href="#contact" id="nav-contact">Kontakt</a>
+</nav>
+
+<div class="container">
+
+    <section id="about">
+        <h2 id="about-title">Rreth Nesh</h2>
+        <p id="about-text">
+            Analitika Kontabilitet Sh.p.k është një zyrë profesionale e kontabilitetit 
+            që ofron shërbime të specializuara financiare dhe keshilla financiare për biznese të të gjitha madhësive.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2 id="services-title">Shërbimet Tona</h2>
+
+        <div class="service">
+            <h3 id="s1-title">Kontabilitet i Përgjithshëm</h3>
+            <p id="s1-text">Mbajtje e librave financiarë dhe përgatitje e raporteve mujore dhe vjetore.</p>
+        </div>
+
+        <div class="service">
+            <h3 id="s2-title">Deklarime Tatimore</h3>
+            <p id="s2-text">Përgatitja dhe dorëzimi i të gjitha deklaratave tatimore sipas ligjit.</p>
+        </div>
+
+        <div class="service">
+            <h3 id="s3-title">Konsulencë Financiare</h3>
+            <p id="s3-text">Këshillim profesional për optimizimin financiar dhe planifikimin e biznesit.</p>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2 id="contact-title">Kontakt</h2>
+        <p id="contact-text">
+            Na kontaktoni për informacione ose për të rezervuar një takim me ekipin tonë profesional.
+        </p>
+
+        <p><strong>Tel:</strong> 045 600 158</p>
+        <p><strong>Tel:</strong> 049 525 830</p>
+        <p><strong>Email:</strong> kontabilitetanalitika@gmail.com</p>
+    </section>
+
+</div>
+
+<footer>
+    <p id="footer-text">© 2025 Analitika Kontabilitet Sh.p.k – Të gjitha të drejtat e rezervuara.</p>
+</footer>
+
+<script>
+/* Language System */
+const lang = {
+    sq: {
+        title: "Analitika Kontabilitet Sh.p.k",
+        subtitle: "Zyra Profesionale e Kontabilitetit",
+        nav_about: "Rreth Nesh",
+        nav_services: "Shërbimet",
+        nav_contact: "Kontakt",
+        about_title: "Rreth Nesh",
+        about_text: "Analitika Kontabilitet Sh.p.k është një zyrë profesionale e kontabilitetit që ofron shërbime të specializuara financiare për biznese të të gjitha madhësive.",
+        services_title: "Shërbimet Tona",
+        s1_title: "Kontabilitet i Përgjithshëm",
+        s1_text: "Mbajtje e librave financiarë dhe përgatitje e raporteve mujore dhe vjetore.",
+        s2_title: "Deklarime Tatimore",
+        s2_text: "Përgatitja dhe dorëzimi i të gjitha deklaratave tatimore sipas ligjit.",
+        s3_title: "Konsulencë Financiare",
+        s3_text: "Këshillim profesional për optimizimin financiar dhe planifikimin e biznesit.",
+        contact_title: "Kontakt",
+        contact_text: "Na kontaktoni për informacione ose për të rezervuar një takim me ekipin tonë profesional.",
+        footer_text: "© 2025 Analitika Kontabilitet Sh.p.k – Të gjitha të drejtat e rezervuara."
+    },
+    en: {
+        title: "Analitika Accounting LLC",
+        subtitle: "Professional Accounting Office",
+        nav_about: "About Us",
+        nav_services: "Services",
+        nav_contact: "Contact",
+        about_title: "About Us",
+        about_text: "Analitika Accounting LLC is a professional accounting office offering specialized financial services for businesses of all sizes.",
+        services_title: "Our Services",
+        s1_title: "General Accounting",
+        s1_text: "Bookkeeping, financial records management, and preparation of monthly and annual reports.",
+        s2_title: "Tax Declarations",
+        s2_text: "Preparation and submission of all tax declarations in accordance with the law.",
+        s3_title: "Financial Consulting",
+        s3_text: "Professional consulting for financial optimization and business planning.",
+        contact_title: "Contact",
+        contact_text: "Contact us for information or to schedule an appointment with our professional team.",
+        footer_text: "© 2025 Analitika Accounting LLC – All rights reserved."
+    },
+    de: {
+        title: "Analitika Buchhaltung GmbH",
+        subtitle: "Professionelles Buchhaltungsbüro",
+        nav_about: "Über Uns",
+        nav_services: "Dienstleistungen",
+        nav_contact: "Kontakt",
+        about_title: "Über Uns",
+        about_text: "Analitika Buchhaltung GmbH ist ein professionelles Buchhaltungsbüro und bietet spezialisierte Finanzdienstleistungen für Unternehmen jeder Größe.",
+        services_title: "Unsere Dienstleistungen",
+        s1_title: "Allgemeine Buchhaltung",
+        s1_text: "Buchführung, Finanzunterlagen und Erstellung von Monats- und Jahresberichten.",
+        s2_title: "Steuererklärungen",
+        s2_text: "Vorbereitung und Einreichung aller Steuererklärungen gemäß dem Gesetz.",
+        s3_title: "Finanzberatung",
+        s3_text: "Professionelle Beratung zur finanziellen Optimierung und Geschäftsplanung.",
+        contact_title: "Kontakt",
+        contact_text: "Kontaktieren Sie uns für Informationen oder um einen Termin mit unserem professionellen Team zu vereinbaren.",
+        footer_text: "© 2025 Analitika Buchhaltung GmbH – Alle Rechte vorbehalten."
+    }
+};
+
+function setLang(l) {
+    for (let key in lang[l]) {
+        const el = document.getElementById(key.replace('_', '-'));
+        if (el) el.innerText = lang[l][key];
+    }
+}
+</script>
+
+</body>
+</html>
